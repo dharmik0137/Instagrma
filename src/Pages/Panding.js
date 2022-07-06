@@ -26,7 +26,7 @@ export default function Panding() {
             status: "Success...."
         }
         acceptData(obj);
-        console.log("Obj==>", obj);
+        Follower.filter((data) => data.reciver !== Login.firstName)
     }
     return (
         <div>
