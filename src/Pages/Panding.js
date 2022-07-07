@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { bindActionCreators } from 'redux';
 import * as allAction from '../Redux/Actions/index'
 
@@ -8,14 +8,14 @@ import * as allAction from '../Redux/Actions/index'
 export default function Panding() {
 
     const dispatch = useDispatch();
-    const { acceptData } = bindActionCreators(allAction, dispatch);
+    const { acceptData, requestData } = bindActionCreators(allAction, dispatch);
 
     let Get_Data = useSelector((state) => state)
 
     const Login = Get_Data.Login.data.find((data) => data)
     console.log("Login==>", Login);
     const Follower = Get_Data.Request.data.filter((data) => data.reciver === Login.firstName)
-    console.log("Follower==>", Follower);
+    const nevigate = useNavigate()
 
     const acceptTheData = (data) => {
         console.log("Data==>", data);
@@ -26,7 +26,7 @@ export default function Panding() {
             status: "Success...."
         }
         acceptData(obj);
-        Follower.filter((data) => data.reciver !== Login.firstName)
+        nevigate('/dashboard/Profile')
     }
     return (
         <div>

@@ -24,7 +24,6 @@ export default function Login() {
       console.log("False")
     }
     loginData(findId)
-
   }
   return (
     <div>

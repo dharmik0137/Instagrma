@@ -19,7 +19,7 @@ export default function Home() {
     const allPost = Get_Data.Post.data;
 
     const dispatch = useDispatch();
-    const { commentData, likeData } = bindActionCreators(allAction, dispatch);
+    const { commentData, likeData, loginData } = bindActionCreators(allAction, dispatch);
 
 
     const addComment = (id) => {
@@ -48,6 +48,7 @@ export default function Home() {
     }
     const setLogout = () => {
         nevigate('/')
+        loginData().pop()
     }
 
     return (
