@@ -8,7 +8,7 @@ import * as allAction from '../Redux/Actions/index'
 export default function Panding() {
 
     const dispatch = useDispatch();
-    const { acceptData, requestData } = bindActionCreators(allAction, dispatch);
+    const { acceptData } = bindActionCreators(allAction, dispatch);
 
     let Get_Data = useSelector((state) => state)
 

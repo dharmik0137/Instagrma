@@ -14,9 +14,6 @@ export default function Serch() {
     const LoginData = data.find((data) => data);
     const RegistrationData = State_data.Registration.data.filter((data) => data.R_id !== LoginData.R_id)
     console.log("Registartion==>", RegistrationData);
-
-
-
     const dispatch = useDispatch();
     const { requestData } = bindActionCreators(allAction, dispatch);
 

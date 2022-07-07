@@ -26,28 +26,32 @@ export default function Login() {
     loginData(findId)
   }
   return (
-    <div>
-      <h1>-----Login Page-----</h1>
-      <table border='1' align='center'>
-        <tr>
-          <td>Enter Email:-</td>
-          <td>
-            <input type='text' placeholder='Enter Email' onChange={(e) => setLogin({ ...login, email: e.target.value })} />
-          </td>
-        </tr>
-        <tr>
-          <td>Enter Password:-</td>
-          <td>
-            <input type='password' placeholder='Enter Password' onChange={(e) => setLogin({ ...login, password: e.target.value })} />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button onClick={() => onUserLogin()}>Submit</button>
-            <Link to='/registration'><button>Registraton</button></Link>
-          </td>
-        </tr>
-      </table>
-    </div>
+    <div className='login-body'>
+      <div className='main-div'>
+        <h1 className='login-page'>Login</h1>
+        <div style={{ marginTop: "38px" }}>
+          <tr>
+            <td style={{ color: "brown" }}>Enter Email</td>
+            <td>
+              <input type='text' placeholder='Enter Email' className='text-first' onChange={(e) => setLogin({ ...login, email: e.target.value })} />
+            </td>
+          </tr>
+          <tr>
+            <td style={{ color: "brown" }}>Enter Password</td>
+            <td>
+              <input type='password' placeholder='Enter Password' className='text-first' onChange={(e) => setLogin({ ...login, password: e.target.value })} />
+            </td>
+          </tr>
+          <div>
+            <tr>
+              <td>
+                <button onClick={() => onUserLogin()} className="btn-first">Submit</button>
+                <Link to='/registration'><button className="btn-first">Registraton</button></Link>
+              </td>
+            </tr>
+          </div>
+        </div>
+      </div>
+    </div >
   )
 }

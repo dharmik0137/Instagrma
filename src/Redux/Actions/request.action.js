@@ -1,6 +1,7 @@
 import { REQUEST } from '../Types'
 
 export const requestData = (data) => {
+    console.log("Data===>", data);
     return async (dispatch) => {
         try {
             dispatch({

@@ -7,9 +7,8 @@ export default function Profile() {
     let Get_Data = useSelector((state) => state)
     const LoginData = Get_Data.Login.data;
     const Login = Get_Data.Login.data.find((data) => data)
-    const Follower = Get_Data.Request.data.filter((data) => data.reciver === Login.firstName)
+    const Follower = Get_Data.Request.data.filter((data) => data.reciver === Login.firstName);
     const Following = Get_Data.Accept.data.filter((data) => data.sender === Login.firstName);
-
     return (
         <div>
             <h1>----Your Profile----</h1>
