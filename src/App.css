@@ -38,35 +38,3 @@
   }
 }
 
-.login-page {
-  padding-top: 23px;
-  color: mediumblue
-}
-
-.main-div {
-  border-width: 2px;
-  height: 400px;
-  width: 450px;
-  margin-left: 704px;
-  margin-top: 150px;
-  border: 1px solid;
-  border-radius: 10px;
-  box-shadow: #282c34;
-}
-
-.text-first {
-  height: 29px;
-  width: 265px;
-  font-size: 18px;
-  margin-bottom: 22px;
-}
-
-.btn-first {
-  height: 40px;
-  width: 110px;
-  font-size: 18px;
-  border-width: 3px;
-  margin-top: 42px;
-  margin-left: 96px;
-  margin-right: -51px;
-}

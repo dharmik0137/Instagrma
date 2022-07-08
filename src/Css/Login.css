@@ -1,0 +1,83 @@
+body {
+    background: linear-gradient(100deg, #66FFFF 1%, #FF00FF 100%);
+    background-attachment: fixed;
+}
+
+.second-div {
+    background-color: white;
+    height: 450px;
+    width: 400px;
+    margin-left: 749px;
+    margin-top: 207px;
+    border-radius: 10px;
+    box-shadow: 8px 9px 122px blueviolet;
+}
+
+.input {
+    margin-right: 117px;
+    margin-top: -6px;
+}
+
+.btn {
+    margin-top: 30px;
+    border: 1px solid;
+    width: 250px;
+    background: linear-gradient(80deg, #66FFFF 1%, #FF00FF 100%);
+}
+
+.pass {
+    margin-right: 248px;
+    margin-right: 20px;
+    margin-top: 32px;
+}
+
+.login {
+    padding-top: 34px;
+    font-size: 20px;
+}
+
+.user {
+    margin-right: 248px;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 425px) {
+    .second-div {
+        background-color: white;
+        margin-left: 60px;
+        margin-top: 170px;
+        height: 450px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 8px 9px 122px blueviolet;
+    }
+
+    .input {
+        margin-left: 50px;
+        margin-top: -6px;
+        width: 200px;
+    }
+
+    .btn {
+        margin-top: 30px;
+        border: 1px solid;
+        width: 250px;
+        background: linear-gradient(80deg, #66FFFF 1%, #FF00FF 100%);
+    }
+
+    .pass {
+        margin-right: 248px;
+        margin-right: 20px;
+        margin-top: 25px;
+    }
+
+    .login {
+        padding-top: 24px;
+        font-size: 25px;
+    }
+
+    .user {
+        margin-right: 20px;
+        margin-top: 30px;
+    }
+}

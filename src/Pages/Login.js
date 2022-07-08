@@ -1,3 +1,5 @@
+import { Button, Input } from '@mui/material';
+import '../Css/Login.css';
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
@@ -26,32 +28,24 @@ export default function Login() {
     loginData(findId)
   }
   return (
-    <div className='login-body'>
-      <div className='main-div'>
-        <h1 className='login-page'>Login</h1>
-        <div style={{ marginTop: "38px" }}>
-          <tr>
-            <td style={{ color: "brown" }}>Enter Email</td>
-            <td>
-              <input type='text' placeholder='Enter Email' className='text-first' onChange={(e) => setLogin({ ...login, email: e.target.value })} />
-            </td>
-          </tr>
-          <tr>
-            <td style={{ color: "brown" }}>Enter Password</td>
-            <td>
-              <input type='password' placeholder='Enter Password' className='text-first' onChange={(e) => setLogin({ ...login, password: e.target.value })} />
-            </td>
-          </tr>
-          <div>
-            <tr>
-              <td>
-                <button onClick={() => onUserLogin()} className="btn-first">Submit</button>
-                <Link to='/registration'><button className="btn-first">Registraton</button></Link>
-              </td>
-            </tr>
-          </div>
+    <div className='second-div'>
+      <h1 className='login'>Login</h1>
+      <div>
+        <p className='user'>Username</p>
+        <Input type='text' className='input' placeholder='Type your email' onChange={(e) => setLogin({ ...login, email: e.target.value })} />
+      </div>
+      <div>
+        <p className='pass'>Password</p>
+        <Input type='password' placeholder='Type your password' className='input' onChange={(e) => setLogin({ ...login, password: e.target.value })} />
+      </div>
+      <div>
+        <div>
+          <Button onClick={() => onUserLogin()} className='btn' style={{ marginTop: "50px", borderRadius: "20px" }}>Login</Button>
+        </div>
+        <div>
+          <Link to='/registration'><Button className='btn-second' style={{ marginTop: "37px" }}>Registraton</Button></Link>
         </div>
       </div>
-    </div >
+    </div>
   )
 }
