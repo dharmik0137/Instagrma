@@ -1,10 +1,12 @@
-import { Button, Card, CardContent, CardMedia, Input } from '@mui/material'
+import { AppBar, Avatar, Button, Card, CardContent, CardMedia, Container, Grid, IconButton, Input, Menu, Toolbar, Tooltip } from '@mui/material'
 import Typography from '@mui/material/Typography';
+import { Box } from '@mui/system';
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import { bindActionCreators } from 'redux';
 import * as allAction from '../Redux/Actions/index'
+import MenuIcon from '@mui/icons-material/Menu';
 
 
 export default function Home() {
@@ -17,6 +19,7 @@ export default function Home() {
 
     let Get_Data = useSelector((state) => state)
     const allPost = Get_Data.Post.data;
+    const Userdata = Get_Data.Login.data;
 
     const dispatch = useDispatch();
     const { commentData, likeData, loginData } = bindActionCreators(allAction, dispatch);
@@ -50,17 +53,30 @@ export default function Home() {
         nevigate('/')
         loginData().pop()
     }
+    const profile = () => {
+        nevigate('/dashboard/profile')
+    }
+    const post = () => {
+        nevigate('/dashboard/addpost')
+    }
+    const serch = () => {
+        nevigate('/dashboard/serch')
+    }
 
     return (
         <div>
-            <h1>----Dashboard----</h1>
-            <div>
-                <p><Link to='addpost'>AddPost</Link></p>
-                <p><Link to='profile'>Check Profile</Link></p>
-                <p><Link to='serch'>Serch</Link></p>
-                <p><button onClick={() => setLogout()}>Logout</button></p>
-            </div>
-
+            <Box sx={{ flexGrow: 1 }}>
+                <AppBar position="static">
+                    <Toolbar>
+                        <Avatar alt="Remy Sharp" src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png' />
+                        <Button color="inherit" onClick={() => profile()}>Profile</Button>
+                        <Button color="inherit" onClick={() => post()}>AddPost</Button>
+                        <Button color="inherit" onClick={() => serch()}>Serch</Button>
+                        <Button color="inherit" onClick={() => setLogout()}>Logout</Button>
+                        <Avatar alt="Remy Sharp" src={`${Userdata[0].avtar}`} />
+                    </Toolbar>
+                </AppBar>
+            </Box>
             <div>
                 {allPost.map((data) =>
                     <table border='1' align='center' style={{ marginTop: "30px" }}>
@@ -99,7 +115,7 @@ export default function Home() {
                         </Card>
                     </table>
                 )}
-            </div>
+            </div> 
         </div >
     )
 }

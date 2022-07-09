@@ -1,13 +1,99 @@
 .main-div {
     margin-left: 618px;
-    height: 750px;
+    height: 770px;
     width: 650px;
     background-color: white;
     margin-top: 100px;
     box-shadow: 8px 10px 86px cornflowerblue;
+    border-radius: 10px;
 }
 
 .btn-one {
     border: 1px solid;
-    background: linear-gradient(80deg, #66FFFF 1%, #FF00FF 100%);
+    background: linear-gradient(40deg, #66FFFF 1%, #FF00FF 100%);
+    width: 246px;
+}
+
+.registration {
+    padding-top: 40px;
+}
+
+.second {
+    padding-top: 15px;
+    margin-left: 90px;
+}
+
+.dob {
+    margin-left: 45px;
+}
+
+.sec-grid {
+    margin-left: 120px;
+}
+
+.in-dob {
+    margin-left: 113px;
+}
+
+.input-1 {
+    margin-left: 30px;
+}
+
+.img-in {
+    width: 210px;
+}
+
+@media only screen and (max-width: 425px) {
+    .main-div {
+        margin-left: 33px;
+        height: 700px;
+        width: 350px;
+        background-color: white;
+        margin-top: 40px;
+        box-shadow: 8px 10px 86px cornflowerblue;
+        border-radius: 10px;
+    }
+
+    .btn-one {
+        border: 1px solid;
+        background: linear-gradient(40deg, #66FFFF 1%, #FF00FF 100%);
+        width: 246px;
+    }
+
+    .registration {
+        padding-top: 40px;
+    }
+
+    .second {
+        padding-top: 5px;
+        margin-left: 0px;
+    }
+
+    .dob {
+        margin-left: 30px;
+    }
+
+    .in-dob {
+        margin-left: 20px;
+        width: 100px;
+    }
+
+    .input-1 {
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+    .grid {
+        margin-top: 10px;
+    }
+
+    .sec-grid {
+        margin-left: 50px;
+    }
+
+    .img-in {
+        width: 220px;
+    }
+
+
 }
